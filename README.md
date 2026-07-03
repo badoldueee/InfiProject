@@ -1,4 +1,3 @@
-```markdown
 # Infi Scripting Language & Compiler Environment (v1.0.0)
 ## Official Developer Manual & Repository Documentation
 
@@ -23,7 +22,7 @@ By default, the execution path context maps directly to the parent directory hou
 ## 3. Core Technical Architecture & File Layout
 The development workspace and compiler distribution are organized into an isolated, clean directory structure:
 
-```text
+
 InfiProject/
 │
 ├── gcc/                           # Bundled portable C toolchain
@@ -43,9 +42,7 @@ InfiProject/
 ├── .gitignore                     # Git filter control configurations
 └── README.md                      # Language manual and reference guide
 
-```
 
----
 
 ## 4. Language Reference Guide
 
@@ -57,17 +54,13 @@ Outputs a literal string message sequence to the execution console pipeline.
 
 * **Syntax:** `print "message"`
 * **Code Example:**
-```text
-print "Initializing system verification sequence..."
 
-```
+print "Initializing system verification sequence..."
 
 
 * **Expected Output:**
-```text
-Initializing system verification sequence...
 
-```
+Initializing system verification sequence...
 
 
 
@@ -77,10 +70,9 @@ Creates a directory inside the current target path. Also accepts absolute paths 
 
 * **Syntax:** `make_folder "folder_name"`
 * **Code Example:**
-```text
+
 make_folder "Production_Build"
 
-```
 
 
 * **Expected Output:**
@@ -92,10 +84,10 @@ Generates or completely replaces a specified target file, injecting the provided
 
 * **Syntax:** `write "file_name" "file_content"`
 * **Code Example:**
-```text
+
 write "build_report.log" "Status: Active"
 
-```
+
 
 
 * **Expected Output:**
@@ -107,10 +99,10 @@ Executes a raw binary stream duplicate of a file from source to target bounds.
 
 * **Syntax:** `copy "source_path" to "destination_path"`
 * **Code Example:**
-```text
+
 copy "build_report.log" to "Backup/report_copy.log"
 
-```
+
 
 
 * **Expected Output:**
@@ -122,10 +114,10 @@ Re-maps file indexes or migrates a resource to a completely separate path locati
 
 * **Syntax:** `move "source_path" to "destination_path"`
 * **Code Example:**
-```text
+
 move "build_report.log" to "Production_Build/final.log"
 
-```
+
 
 
 * **Expected Output:**
@@ -137,10 +129,10 @@ Permanently unlinks and purges a single file record from the storage sector.
 
 * **Syntax:** `delete "file_name"`
 * **Code Example:**
-```text
+
 delete "temporary_cache.tmp"
 
-```
+
 
 
 * **Expected Output:**
@@ -158,18 +150,18 @@ Prepends a specific text flag string directly to the beginning of all filenames 
 
 * **Syntax:** `add_prefix "prefix_string"`
 * **Code Example:**
-```text
+
 add_prefix "verified_"
 
-```
+
 
 
 * **Expected Output:**
-```text
+
 [Infi Engine] Renamed: log.txt -> verified_log.txt
 [Infi Engine] Renamed: data.csv -> verified_data.csv
 
-```
+
 
 
 
@@ -179,18 +171,18 @@ Appends a specific text string directly to the file name while preserving its or
 
 * **Syntax:** `add_suffix "suffix_string"`
 * **Code Example:**
-```text
+
 add_suffix "_stable"
 
-```
+
 
 
 * **Expected Output:**
-```text
+
 [Infi Engine] Renamed: script.py -> script_stable.py
 [Infi Engine] Renamed: notes.md -> notes_stable.md
 
-```
+
 
 
 
@@ -200,18 +192,18 @@ Scans all files within the directory workspace, purging any file matching the na
 
 * **Syntax:** `delete_if_contains "match_phrase"`
 * **Code Example:**
-```text
+
 delete_if_contains "temp_cache"
 
-```
+
 
 
 * **Expected Output:**
-```text
+
 [Infi Engine] Purged: temp_cache_01.tmp
 [Infi Engine] Purged: old_temp_cache.log
 
-```
+
 
 
 
@@ -221,18 +213,18 @@ Renames and archives all local files in the active workspace by applying an `OLD
 
 * **Syntax:** `archive_except "safe_file"`
 * **Code Example:**
-```text
+
 archive_except "verify.infi"
 
-```
+
 
 
 * **Expected Output:**
-```text
+
 [Infi Engine] Archiving: system_test.txt -> OLD_2026-07-03_system_test.txt
 [Infi Engine] Bypassed protected file: verify.infi
 
-```
+
 
 
 
@@ -246,17 +238,17 @@ Applies an un-indexed symmetric bitwise XOR key stream mutation across the targe
 
 * **Syntax:** `encrypt "file_name" with "cipher_key"`
 * **Code Example:**
-```text
+
 encrypt "production_report.log" "secret_key_123"
 
-```
+
 
 
 * **Expected Output:**
-```text
+
 [Infi Crypto] Applied symmetric mutation to production_report.log
 
-```
+
 
 
 
@@ -266,17 +258,17 @@ Runs a modified non-cryptographic djb2 hashing string loop to calculate and retu
 
 * **Syntax:** `get_hash "file_name"`
 * **Code Example:**
-```text
+
 get_hash "production_report.log"
 
-```
+
 
 
 * **Expected Output:**
-```text
+
 [Infi Audit] File: production_report.log | Checksum Hash: 5381398231
 
-```
+
 
 
 
@@ -286,17 +278,16 @@ Performs deep pattern inspection across all files matching the target string pat
 
 * **Syntax:** `scan_inside "file_pattern" for "search_phrase"`
 * **Code Example:**
-```text
+
 scan_inside ".log" for "FATAL_ERROR"
 
-```
+
 
 
 * **Expected Output:**
-```text
+
 [Infi Scanner] Match found in production_report.log [Line 14]: [CRITICAL] FATAL_ERROR detected.
 
-```
 
 
 
@@ -309,28 +300,27 @@ scan_inside ".log" for "FATAL_ERROR"
 The `repeat` statement loops all enclosed procedural lines for a defined literal count.
 
 * **Syntax:**
-```text
+
 repeat(count) {
     # Loop Body
 }
 
-```
+
 
 
 * **Code Example:**
-```text
+
 repeat(3) {
     print "Looping process instance..."
 }
 
-```
 
 
 * **Expected Output:**
-```text
+
 Looping process instance...
 
-```
+
 
 
 
@@ -339,31 +329,31 @@ Looping process instance...
 The `safe_run` statement enables a dry-run environment wrapper. It runs syntactic validation, tracks path variables, and prints structural execution logs without altering the physical disk layout.
 
 * **Syntax:**
-```text
+
 safe_run {
     # Non-destructive simulation commands
 }
 
-```
+
 
 
 * **Code Example:**
-```text
+
 safe_run {
     make_folder "Test_Sim"
     delete "production_file.db"
 }
 
-```
+
 
 
 * **Expected Output:**
-```text
+
 [SIMULATION WARNING] dry_run context active. No physical changes will be written to disk.
 [SIMULATION] make_folder: Test_Sim (Passed)
 [SIMULATION] delete: production_file.db (Passed)
 
-```
+
 
 
 
@@ -373,7 +363,7 @@ safe_run {
 
 The following comprehensive script leverages multiple layers of the language. Save this code sample as `verify.infi` and load it into your `InfiCodeEditor` application to execute:
 
-```text
+
 # --- Infi Automated System Verification Script ---
 print "--- Initiating System Feature Verification Pipeline ---"
 
@@ -389,11 +379,11 @@ safe_run {
 
 print "Simulation concluded successfully. No structural filesystem changes applied."
 
-```
+
 
 ### Complete Runtime Output
 
-```text
+
 --- Initiating System Feature Verification Pipeline ---
 [SIMULATION WARNING] dry_run context active. No physical changes will be written to disk.
 [Infi System] Testing critical scripts inside dry-run context...
@@ -405,7 +395,7 @@ print "Simulation concluded successfully. No structural filesystem changes appli
 [Infi Scanner] Match found in production_report.log [Line 1]: Operational status: system framework active.
 Simulation concluded successfully. No structural filesystem changes applied.
 
-```
+
 
 ---
 
@@ -413,6 +403,6 @@ Simulation concluded successfully. No structural filesystem changes applied.
 
 This project is open-source software licensed under the terms of the **GNU General Public License v3.0 (GPL-3.0)**. See the accompanying `LICENSE` file for full permission details.
 
-```
+
 
 ```
