@@ -1,0 +1,2 @@
+print "Hi!"
+make_folder "Folder1"

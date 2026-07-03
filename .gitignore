@@ -1,0 +1,15 @@
+# PyInstaller & Build outputs
+build/
+dist/
+*.spec
+
+# Bundled Heavy Toolchains (Users should download this via releases, not clone it)
+gcc/
+
+# Python caching
+__pycache__/
+*.pyc
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
