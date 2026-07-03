@@ -36,7 +36,7 @@ InfiProject/
 │   └── editor_app.py              # Tkinter-powered desktop GUI IDE
 │
 ├── demo/                          # Local automated testing directory
-│   └── demo1.inf                  # Pre-configured syntax validation file
+│   └── demo1.infi                  # Pre-configured syntax validation file
 │
 ├── LICENSE                        # GNU General Public License v3.0
 ├── .gitignore                     # Git filter control configurations
